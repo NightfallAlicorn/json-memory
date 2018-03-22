@@ -1,6 +1,6 @@
 {
   "name": "json-memory",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An easy-to-use JSON file read and write handler all controlled with object methods.",
   "main": "json-memory.js",
   "scripts": {

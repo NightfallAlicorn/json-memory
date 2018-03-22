@@ -60,6 +60,8 @@ Download the latest release from [GitHub](https://github.com/NightfallAlicorn/js
 * [Declaring](#declaring)
 * [Naming Collision](#naming-collision)
 * [Methods](#methods)
+   * [read](#read)
+   * [write](#write)
 
 ## Declaring
 
