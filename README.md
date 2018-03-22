@@ -114,7 +114,7 @@ Reads the contents from the JSON file and replaces the current object properties
     * `error` **[object Error] | null** Provides an error object else null if there isn't any.
 
 ```javascript
-// Asynchronous Method
+// Asynchronous method
 data.read((error) => {
   if (error) {
     // Handle error.
@@ -123,19 +123,19 @@ data.read((error) => {
   // Handle data if success.
 })
 
-// Synchronous Method
+// Synchronous method
 data.read()
 ```
 
 ### write
 
-Writes the object properties and values to the JSON file.
+Writes the object properties and values to the JSON file. JsonMemory internal method and property names are excluded from the file.
 
 * `callback` **function** Optional. If this callback is provided, the write will asynchronous or else it will be synchronous.
     * `error` **[object Error] | null** Provides an error object else null if there isn't any.
 
 ```javascript
-// Asynchronous Method
+// Asynchronous method
 data.write((error) => {
   if (error) {
     // Handle error.
@@ -144,6 +144,6 @@ data.write((error) => {
   // Handle data if success.
 })
 
-// Synchronous Method
+// Synchronous method
 data.write()
 ```

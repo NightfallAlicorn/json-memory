@@ -1,6 +1,6 @@
 {
   "name": "json-memory",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An easy-to-use JSON file read and write handler all controlled with object methods.",
   "main": "json-memory.js",
   "scripts": {
@@ -18,10 +18,10 @@
     "save",
     "load",
     "node",
-    "nightfallalicorn",
     "file",
     "handler",
-    "manager"
+    "manager",
+    "nightfallalicorn"
   ],
   "author": "nightfallalicorn",
   "license": "MIT",
