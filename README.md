@@ -58,7 +58,8 @@ Download the latest release from [GitHub](https://github.com/NightfallAlicorn/js
 * [Installing](#installing)
 * [Index](#index)
 * [Declaring](#declaring)
-* [Actions](#actions)
+* [Naming Collision](#namingcollision)
+* [Methods](#methods)
 
 ## Declaring
 
@@ -90,7 +91,20 @@ var data = new JsonMemory('./example-json-file', (error) => {
 var data = new JsonMemory('./example-json-file', false)
 ```
 
-## Actions
+## Naming Collision
+
+JsonMemory needs a small amount of object space to work with. To avoid issues, do not use any of these method or property  names.
+
+**Methods**
+
+* [read](#read)
+* [write](#write)
+
+**Properties**
+
+* `_file` **string** Holds the JSON file directory file path for reading and writing to.
+
+## Methods
 
 ### read
 
