@@ -58,7 +58,7 @@ Download the latest release from [GitHub](https://github.com/NightfallAlicorn/js
 * [Installing](#installing)
 * [Index](#index)
 * [Declaring](#declaring)
-* [Naming Collision](#namingcollision)
+* [Naming Collision](#naming-collision)
 * [Methods](#methods)
 
 ## Declaring
