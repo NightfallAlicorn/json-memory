@@ -1,0 +1,12 @@
+# Ignore all files and directories.
+*
+
+# Allow project root directory contents.
+!*/
+
+# Include only.
+!/.gitignore
+!/json-memory.js
+!/LICENSE
+!/package.json
+!/README.md
