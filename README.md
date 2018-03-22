@@ -102,7 +102,7 @@ JsonMemory needs a small amount of object space to work with. To avoid issues, d
 
 **Properties**
 
-* `_file` **string** Holds the JSON file directory file path for reading and writing to.
+* `_file` **string** Holds the JSON directory file path for reading and writing to.
 
 ## Methods
 
