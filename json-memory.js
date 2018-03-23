@@ -9,8 +9,8 @@ const FILE_EXTENSIONS = ['.json', '.jsonp']
 
 /**
  * Resolves file path conflicts with the OS and local path input.
- * @param {string} file The file directory of the JSON file.
- * @returns {string} The resolved file path.
+ * @param {string} file The file directory to resolve.
+ * @returns {string} The resolved file directory.
  */
 const resolvePath = function resolvePath (file) {
   return file.substring(0, 2) === './' ? path.resolve(__dirname, file) : path.resolve(file)
@@ -18,7 +18,7 @@ const resolvePath = function resolvePath (file) {
 
 module.exports = class JsonMemory {
   /**
-   * JsonMemory class object that provides easy read and write functionality.
+   * JsonMemory object class provides easy read and write functionality with JSON files.
    * @param {string} file Path to the JSON file. Prefix with './' for local script folder.
    * @param {boolean|function(Error):void} [loadOrCallback=] If the parameter is a boolean,
    * the module will attempt to load the file synchronous. Else if the parameter is a function,
@@ -94,7 +94,8 @@ module.exports = class JsonMemory {
   /**
    * Write the object values to the JSON file.
    *
-   * If the callback is included. The write will be asynchronous with a callback provided when the operation is done.
+   * If the callback is included.
+   * The write will be asynchronous with a callback provided when the operation is done.
    *
    * If the callback is excluded. The write will be synchronous.
    * @param {function (Error} callback Optional. Use for asynchronous JSON writing.

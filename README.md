@@ -8,7 +8,7 @@
 
 Badges from [Shields.io](http://shields.io) and [badge.fury.io](https://badge.fury.io).
 
-**Disclaimer: Use at your own risk. Even though I've taken care to avoid errors best of my ability. There is a realm of possibility bugs exist. Be sure to take precaution by backing up your files.**
+**Disclaimer: Use at your own risk. Even though I've taken care to avoid errors best of my ability. There is a realm of possibility that bugs still exist. Be sure to take precaution by backing up your files.**
 
 ## Example
 
@@ -95,7 +95,7 @@ var data = new JsonMemory('./example-json-file', false)
 
 ## Naming Collision
 
-JsonMemory needs a small amount of object space to work with. To avoid issues, do not use any of these method or property  names.
+JsonMemory needs a small amount of object space to work with. To avoid issues, do not use any of these method or property names for this object.
 
 **Methods**
 
@@ -110,13 +110,15 @@ JsonMemory needs a small amount of object space to work with. To avoid issues, d
 
 ### read
 
-Reads the contents from the JSON file and replaces the current object properties and values. Note that all the object properties, excluding module dependent ones, will be lost and replaced with the ones from the JSON file.
+Reads the contents from the JSON file and replaces the current object properties and values with them. Note that all the object properties, excluding module dependent ones, will be lost and replaced with the ones from the JSON file.
 
-* `callback` **function** Optional. If this callback is provided, the read will asynchronous or else it will be synchronous.
+* `callback` **function** Optional. If this callback is provided, the read will be asynchronous or else it will be synchronous.
     * `error` **[object Error] | null** Provides an error object else null if there isn't any.
 
+E.g.
+
 ```javascript
-// Asynchronous method
+// Asynchronous method.
 data.read((error) => {
   if (error) {
     // Handle error.
@@ -125,7 +127,7 @@ data.read((error) => {
   // Handle data if success.
 })
 
-// Synchronous method
+// Synchronous method.
 data.read()
 ```
 
@@ -133,11 +135,13 @@ data.read()
 
 Writes the object properties and values to the JSON file. JsonMemory internal method and property names are excluded from the file.
 
-* `callback` **function** Optional. If this callback is provided, the write will asynchronous or else it will be synchronous.
+* `callback` **function** Optional. If this callback is provided, the write will be asynchronous or else it will be synchronous.
     * `error` **[object Error] | null** Provides an error object else null if there isn't any.
 
+E.g.
+
 ```javascript
-// Asynchronous method
+// Asynchronous method.
 data.write((error) => {
   if (error) {
     // Handle error.
@@ -146,6 +150,6 @@ data.write((error) => {
   // Handle data if success.
 })
 
-// Synchronous method
+// Synchronous method.
 data.write()
 ```
