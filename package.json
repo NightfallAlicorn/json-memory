@@ -28,5 +28,11 @@
   "bugs": {
     "url": "https://github.com/NightfallAlicorn/json-memory/issues"
   },
-  "homepage": "https://github.com/NightfallAlicorn/json-memory#readme"
+  "homepage": "https://github.com/NightfallAlicorn/json-memory#readme",
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "files": [
+    "json-memory.js"
+  ]
 }

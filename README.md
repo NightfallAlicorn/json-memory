@@ -1,12 +1,14 @@
 # JsonMemory
 
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![dependencies](https://img.shields.io/badge/dependences-0-blue.svg)]()
+[![contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![node](https://img.shields.io/badge/node->%3D6.11.4-blue.svg)]()
-[![npm version](https://badge.fury.io/js/json-memory.svg)](https://badge.fury.io/js/json-memory)
+[![status](https://img.shields.io/badge/status-stable-brightgreen.svg)]()
 
-Badges from [Shields.io](http://shields.io) and [badge.fury.io](https://badge.fury.io).
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+
+[![NPM](https://nodei.co/npm/json-memory.png)](https://npmjs.org/package/json-memory)
+
+Badges from: [NodeICO](https://nodei.co), [standard JS](https://standardjs.com) and [Shields IO](http://shields.io)
 
 **Disclaimer: Use at your own risk. Even though I've taken care to avoid errors best of my ability. There is a realm of possibility that bugs still exist. Be sure to take precaution by backing up your files.**
 
@@ -66,7 +68,7 @@ Download the latest release from [GitHub](https://github.com/NightfallAlicorn/js
 ## Declaring
 
 * `file` **string** The local address of the JSON file. Note that '.json' will automatically be added to the file extension if '.json' or '.jsonp' aren't added.
-* `load` **boolean|function** Optional. If the parameter is a boolean, the module will attempt to load the file synchronously. Else if the parameter is a function, the module will attempt to load the file asynchronously. Default: true.
+* `load` **boolean | function** Optional. If the parameter is a boolean, the module will attempt to load the file synchronously. Else if the parameter is a function, the module will attempt to load the file asynchronously. Default: true.
 
 ```javascript
 // Minimum.
@@ -83,7 +85,7 @@ console.log(data)
 // Asynchronous file load example.
 var data = new JsonMemory('./example-json-file', (error) => {
   if (error) {
-    console.warn(error)
+    console.warn(error.message)
     return
   }
   console.log(data)
@@ -113,7 +115,7 @@ JsonMemory needs a small amount of object space to work with. To avoid issues, d
 Reads the contents from the JSON file and replaces the current object properties and values with them. Note that all the object properties, excluding module dependent ones, will be lost and replaced with the ones from the JSON file.
 
 * `callback` **function** Optional. If this callback is provided, the read will be asynchronous or else it will be synchronous.
-    * `error` **[object Error] | null** Provides an error object else null if there isn't any.
+* `error` **[object Error] | null** Provides an error object else null if there isn't any.
 
 E.g.
 
@@ -136,7 +138,7 @@ data.read()
 Writes the object properties and values to the JSON file. JsonMemory internal method and property names are excluded from the file.
 
 * `callback` **function** Optional. If this callback is provided, the write will be asynchronous or else it will be synchronous.
-    * `error` **[object Error] | null** Provides an error object else null if there isn't any.
+* `error` **[object Error] | null** Provides an error object else null if there isn't any.
 
 E.g.
 

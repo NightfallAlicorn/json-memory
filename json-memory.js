@@ -8,6 +8,15 @@ const FILE_ENCODING = 'UTF-8'
 const FILE_EXTENSIONS = ['.json', '.jsonp']
 
 /**
+ * Copies an object without it being linked to the original.
+ * @param {object} object Original object.
+ * @return {object} Deep copied object.
+ */
+const deepCopy = function deepCopy (object) {
+  return JSON.parse(JSON.stringify(object))
+}
+
+/**
  * Resolves file path conflicts with the OS and local path input.
  * @param {string} file The file directory to resolve.
  * @returns {string} The resolved file directory.
@@ -103,7 +112,7 @@ module.exports = class JsonMemory {
    */
   write (callback) {
     // Deep copy the object so that it's not object referenced.
-    let data = JSON.parse(JSON.stringify(this))
+    let data = deepCopy(this)
 
     // Remove built-in module properties from object root.
     EXCLUDED_PROPERTIES.forEach((value) => {
